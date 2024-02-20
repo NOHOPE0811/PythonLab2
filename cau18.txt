@@ -1,0 +1,11 @@
+def xoa_phan_tu_trung(danh_sach):
+    danh_sach_khong_trung = []
+    for phan_tu in danh_sach:
+        if phan_tu not in danh_sach_khong_trung:
+            danh_sach_khong_trung.append(phan_tu)
+    return danh_sach_khong_trung
+
+# Sử dụng hàm:
+danh_sach = [1, 2, 3, 4, 3, 2, 5, 6, 7, 8, 1]
+danh_sach_khong_trung = xoa_phan_tu_trung(danh_sach)
+print("Danh sách sau khi xóa các phần tử trùng nhau:", danh_sach_khong_trung)

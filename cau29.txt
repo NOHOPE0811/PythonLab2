@@ -1,0 +1,8 @@
+def bang_cuu_chuong():
+    for i in range(1, 10):
+        for j in range(1, 11):
+            print(f"{i} x {j} = {i * j}")
+        print()  # In một dòng trống giữa mỗi bảng cửu chương
+
+# Sử dụng chương trình để in bảng cửu chương:
+bang_cuu_chuong()

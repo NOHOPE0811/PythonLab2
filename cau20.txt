@@ -1,0 +1,10 @@
+def tinh_tich(danh_sach):
+    tich = 1
+    for so in danh_sach:
+        tich *= so
+    return tich
+
+# Sử dụng hàm:
+danh_sach = [1, 2, 3, 4, 5]
+tich = tinh_tich(danh_sach)
+print("Tích của các số trong danh sách là:", tich)

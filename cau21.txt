@@ -1,0 +1,7 @@
+def chuoi_nguoc(chuoi):
+    return chuoi[::-1]
+
+# Sử dụng hàm:
+chuoi = "Hello, world!"
+chuoi_nguoc = chuoi_nguoc(chuoi)
+print("Chuỗi nghịch đảo:", chuoi_nguoc)

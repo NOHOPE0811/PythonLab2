@@ -1,0 +1,2 @@
+def noi_tu_dien(dic1, dic2):
+    return {**dic1, **dic2}

@@ -1,0 +1,5 @@
+def sap_xep_tang(tru_dien):
+    return {k: v for k, v in sorted(tru_dien.items(), key=lambda item: item[1])}
+
+def sap_xep_giam(tru_dien):
+    return {k: v for k, v in sorted(tru_dien.items(), key=lambda item: item[1], reverse=True)}

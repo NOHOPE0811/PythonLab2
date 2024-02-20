@@ -1,0 +1,17 @@
+def tam_giac_pascal(n):
+    tam_giac = []
+    for i in range(n):
+        hang = [1]  # Giá trị đầu tiên của mỗi hàng luôn là 1
+        if i > 0:
+            for j in range(1, i):
+                hang.append(tam_giac[i - 1][j - 1] + tam_giac[i - 1][j])
+            hang.append(1)  # Giá trị cuối cùng của mỗi hàng luôn là 1
+        tam_giac.append(hang)
+
+    # In tam giác Pascal
+    for hang in tam_giac:
+        print(" ".join(str(so) for so in hang))
+
+# Sử dụng hàm:
+n = 5
+tam_giac_pascal(n)

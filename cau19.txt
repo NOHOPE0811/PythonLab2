@@ -1,0 +1,10 @@
+def tinh_tong(danh_sach):
+    tong = 0
+    for so in danh_sach:
+        tong += so
+    return tong
+
+# Sử dụng hàm:
+danh_sach = [1, 2, 3, 4, 5]
+tong = tinh_tong(danh_sach)
+print("Tổng các số trong danh sách là:", tong)

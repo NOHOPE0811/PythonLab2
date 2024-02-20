@@ -1,0 +1,9 @@
+def tong_gia_tri(tru_dien):
+    tong = 0
+    for gia_tri in tru_dien.values():
+        tong += gia_tri
+    return tong
+
+# Sử dụng hàm:
+tu_dien = {'a': 10, 'b': 20, 'c': 30}
+print("Tổng các giá trị trong từ điển là:", tong_gia_tri(tu_dien))

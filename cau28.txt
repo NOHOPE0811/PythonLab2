@@ -1,0 +1,26 @@
+import math
+
+def trung_vi(danh_sach):
+    danh_sach.sort()
+    n = len(danh_sach)
+    if n % 2 == 0:
+        trung_vi = (danh_sach[n//2 - 1] + danh_sach[n//2]) / 2
+    else:
+        trung_vi = danh_sach[n//2]
+    return trung_vi
+
+def gia_tri_trung_binh(danh_sach):
+    return sum(danh_sach) / len(danh_sach)
+
+def do_lech_chuan(danh_sach):
+    trung_binh = gia_tri_trung_binh(danh_sach)
+    n = len(danh_sach)
+    tong_binh_phuong_chenh_lech = sum((x - trung_binh) ** 2 for x in danh_sach)
+    do_lech_chuan = math.sqrt(tong_binh_phuong_chenh_lech / n)
+    return do_lech_chuan
+
+# Sử dụng các hàm:
+danh_sach = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print("Trung vị của danh sách là:", trung_vi(danh_sach))
+print("Giá trị trung bình của danh sách là:", gia_tri_trung_binh(danh_sach))
+print("Độ lệch chuẩn của danh sách là:", do_lech_chuan(danh_sach))

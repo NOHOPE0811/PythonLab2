@@ -1,0 +1,43 @@
+def merge_tang_dan(danh_sach1, danh_sach2):
+    i = 0
+    j = 0
+    merged_list = []
+    while i < len(danh_sach1) and j < len(danh_sach2):
+        if danh_sach1[i] < danh_sach2[j]:
+            merged_list.append(danh_sach1[i])
+            i += 1
+        else:
+            merged_list.append(danh_sach2[j])
+            j += 1
+    merged_list.extend(danh_sach1[i:])
+    merged_list.extend(danh_sach2[j:])
+    return merged_list
+
+def merge_giam_dan(danh_sach1, danh_sach2):
+    i = len(danh_sach1) - 1
+    j = len(danh_sach2) - 1
+    merged_list = []
+    while i >= 0 and j >= 0:
+        if danh_sach1[i] > danh_sach2[j]:
+            merged_list.append(danh_sach1[i])
+            i -= 1
+        else:
+            merged_list.append(danh_sach2[j])
+            j -= 1
+    while i >= 0:
+        merged_list.append(danh_sach1[i])
+        i -= 1
+    while j >= 0:
+        merged_list.append(danh_sach2[j])
+        j -= 1
+    return merged_list
+
+# Sử dụng hàm:
+danh_sach1 = [1, 3, 5, 7]
+danh_sach2 = [2, 4, 6, 8]
+print("Danh sach hop nhat theo chieu tang dan:", merge_tang_dan(danh_sach1, danh_sach2))
+
+danh_sach3 = [8, 6, 4, 2]
+danh_sach4 = [7, 5, 3, 1]
+print("Danh sach hop nhat theo chieu giam dan:", merge_giam_dan(danh_sach3, danh_sach4))
+

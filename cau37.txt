@@ -1,0 +1,2 @@
+def xoa_trung(tu_dien):
+    return dict(sorted(tu_dien.items()))

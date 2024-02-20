@@ -1,0 +1,24 @@
+def sinh_chuoi_nhi_phan(n):
+    if n <= 0:
+        return []
+
+    if n == 1:
+        return ['0', '1']
+
+    # Đệ quy để sinh chuỗi nhị phân có độ dài n-1
+    chuoi_nhi_phan_n_1 = sinh_chuoi_nhi_phan(n - 1)
+
+    # Dựa vào chuỗi nhị phân có độ dài n-1, ta có thể tạo ra chuỗi nhị phân có độ dài n
+    chuoi_nhi_phan_n = []
+    for chuoi in chuoi_nhi_phan_n_1:
+        chuoi_nhi_phan_n.append(chuoi + '0')
+        chuoi_nhi_phan_n.append(chuoi + '1')
+
+    return chuoi_nhi_phan_n
+
+# Sử dụng hàm:
+n = 3
+chuoi_nhi_phan = sinh_chuoi_nhi_phan(n)
+print(f"Tất cả các chuỗi số nhị phân có chiều dài {n}:")
+for chuoi in chuoi_nhi_phan:
+    print(chuoi)

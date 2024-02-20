@@ -1,0 +1,68 @@
+# 38) Đối tượng sinh viên
+class SinhVien:
+    def __init__(self, ho_ten, gioi_tinh):
+        self.ho_ten = ho_ten
+        self.gioi_tinh = gioi_tinh
+
+    def diem_danh(self):
+        print("Điểm danh của sinh viên:", self.ho_ten)
+
+# Đối tượng sinh viên ngành công nghệ thông tin
+class SinhVienCNTT(SinhVien):
+    def diem_danh(self):
+        print("Tôi là sinh viên CNTT:", self.ho_ten)
+
+# Đối tượng sinh viên ngành truyền thông mạng máy tính
+class SinhVienTTMMT(SinhVien):
+    def diem_danh(self):
+        print("Tôi là sinh viên TT-MMT:", self.ho_ten)
+
+# Sử dụng các lớp
+sv1 = SinhVienCNTT("Nguyễn Văn A", "Nam")
+sv2 = SinhVienTTMMT("Trần Thị B", "Nữ")
+sv1.diem_danh()  # Kết quả: Tôi là sinh viên CNTT: Nguyễn Văn A
+sv2.diem_danh()  # Kết quả: Tôi là sinh viên TT-MMT: Trần Thị B
+
+# 39) Đọc tập tin văn bản
+def doc_tap_tin(ten_tap_tin):
+    with open(ten_tap_tin, 'r') as file:
+        noi_dung = file.read()
+    return noi_dung
+
+# 40) Đọc n dòng đầu tiên của tập tin văn bản
+def doc_n_dong_dau(ten_tap_tin, n):
+    with open(ten_tap_tin, 'r') as file:
+        dong = [next(file) for _ in range(n)]
+    return dong
+
+# 41) Nối 1 chuỗi vào cuối tập tin văn bản
+def noi_chuoi_cuoi(ten_tap_tin, chuoi):
+    with open(ten_tap_tin, 'a') as file:
+        file.write(chuoi)
+
+# 42) Đọc n dòng cuối cùng của tập tin văn bản
+def doc_n_dong_cuoi(ten_tap_tin, n):
+    with open(ten_tap_tin, 'r') as file:
+        dong = file.readlines()[-n:]
+    return dong
+
+# 43) Đếm số dòng, số từ trong tập tin văn bản
+def dem_dong_tu(ten_tap_tin):
+    with open(ten_tap_tin, 'r') as file:
+        noi_dung = file.read()
+        so_dong = len(noi_dung.split('\n'))
+        so_tu = len(noi_dung.split())
+    return so_dong, so_tu
+
+# 44) Tính tần số xuất hiện các từ trong tập tin văn bản
+def tan_so_tu(ten_tap_tin):
+    with open(ten_tap_tin, 'r') as file:
+        noi_dung = file.read()
+        tu = noi_dung.split()
+        tan_so = {}
+        for word in tu:
+            if word in tan_so:
+                tan_so[word] += 1
+            else:
+                tan_so[word] = 1
+    return tan_so

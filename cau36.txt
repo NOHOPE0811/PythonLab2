@@ -1,0 +1,10 @@
+def combine_tu_dien(d1, d2):
+    result = {}
+    for k in d1:
+        result[k] = d1[k]
+    for k in d2:
+        if k in result:
+            result[k] += d2[k]
+        else:
+            result[k] = d2[k]
+    return result

@@ -1,0 +1,6 @@
+def in_mau():
+    for i in range(1, 10):
+        print(str(i) * i)
+
+# Sử dụng chương trình:
+in_mau()

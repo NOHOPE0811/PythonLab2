@@ -1,0 +1,15 @@
+def giai_thap_ha_noi(n, cot_a, cot_b, cot_c):
+    if n == 1:
+        print(f"Chuyển tầng 1 từ {cot_a} sang {cot_b}")
+        return
+    giai_thap_ha_noi(n - 1, cot_a, cot_c, cot_b)
+    print(f"Chuyển tầng {n} từ {cot_a} sang {cot_b}")
+    giai_thap_ha_noi(n - 1, cot_c, cot_b, cot_a)
+
+# Sử dụng chương trình:
+n = 3  # số tầng của tháp
+cot_a = 'A'
+cot_b = 'B'
+cot_c = 'C'
+print(f"Giải bài toán Tháp Hà Nội với {n} tầng:")
+giai_thap_ha_noi(n, cot_a, cot_b, cot_c)

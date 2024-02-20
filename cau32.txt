@@ -1,0 +1,5 @@
+def tich_gia_tri(tru_dien):
+    tich = 1
+    for gia_tri in tru_dien.values():
+        tich *= gia_tri
+    return tich
