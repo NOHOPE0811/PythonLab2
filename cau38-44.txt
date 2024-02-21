@@ -30,9 +30,21 @@ print("Read String is :",str)
 
 # 40) Đọc n dòng đầu tiên của tập tin văn bản
 def doc_n_dong_dau(ten_tap_tin, n):
-    with open(ten_tap_tin, 'r') as file:
-        dong = [next(file) for _ in range(n)]
-    return dong
+    try:
+        with open(ten_tap_tin, 'r') as file:
+            for i in range(n):
+                dong = file.readline()
+                if not dong:
+                    break
+                print(dong, end='')
+    except FileNotFoundError:
+        print("Tap tin '{ten_tap_tin}' khong ton tai")
+    return doc_n_dong_dau
+
+ten_tap_tin = "MT.txt"
+n =1
+doc_n_dong_dau(ten_tap_tin,n)
+print(doc_n_dong_dau)
 
 # 41) Nối 1 chuỗi vào cuối tập tin văn bản
 def noi_chuoi_cuoi(ten_tap_tin, chuoi):
