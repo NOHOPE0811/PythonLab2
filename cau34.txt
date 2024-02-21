@@ -1,2 +1,6 @@
 def noi_tu_dien(dic1, dic2):
     return {**dic1, **dic2}
+
+dic1={1:10, 2:20}
+dic2={3:30, 4:40}
+print("Tu dien sau khi noi la:",noi_tu_dien(dic1,dic2))
