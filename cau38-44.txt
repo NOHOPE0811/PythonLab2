@@ -24,10 +24,9 @@ sv1.diem_danh()  # Kết quả: Tôi là sinh viên CNTT: Nguyễn Văn A
 sv2.diem_danh()  # Kết quả: Tôi là sinh viên TT-MMT: Trần Thị B
 
 # 39) Đọc tập tin văn bản
-def doc_tap_tin(ten_tap_tin):
-    with open(ten_tap_tin, 'r') as file:
-        noi_dung = file.read()
-    return noi_dung
+foo = open("MT.txt","r+")
+str = foo.read()
+print("Read String is :",str)
 
 # 40) Đọc n dòng đầu tiên của tập tin văn bản
 def doc_n_dong_dau(ten_tap_tin, n):
