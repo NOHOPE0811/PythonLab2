@@ -3,3 +3,6 @@ def sap_xep_tang(tru_dien):
 
 def sap_xep_giam(tru_dien):
     return {k: v for k, v in sorted(tru_dien.items(), key=lambda item: item[1], reverse=True)}
+tu_dien = {'a': 10, 'b': 20, 'c': 30}
+print("Sap xep tang dan la:", sap_xep_tang(tu_dien))
+print("Sap xep tang dan la:", sap_xep_giam(tu_dien))
