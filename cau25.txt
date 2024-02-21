@@ -1,0 +1,12 @@
+def phan_tu_dai_dien(danh_sach):
+    dai_dien = []
+    for phan_tu in danh_sach:
+        if phan_tu not in dai_dien:
+            dai_dien.append(phan_tu)
+    return dai_dien
+
+# Sử dụng hàm:
+danh_sach = [2,5,2,2,5,3,7,6,8,8]
+dai_dien = phan_tu_dai_dien(danh_sach)
+print("Phan tu dai dien trong danh sach:", dai_dien)
+    
