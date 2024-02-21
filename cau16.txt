@@ -1,11 +1,12 @@
-def timmax(list):
-    if not list:
-        return None
-    max = list[0]
-    for so in list:
-        if so > max:
-            max = so
-    return max
+def tangdan(list):
+    list.sort()
+    return list
 
-list = [3, 6, 2, 8, 1]
-print("So lon nhat trong danh sach la:", timmax(list))
+def giamdan(list):
+    list.sort(reverse =True)
+    return list
+    
+list = [5, 6, 2, 10, 1]
+print("Danh sach sau khi sap xep tang dan: ", tangdan(list))
+print("Danh sach sau khi sap xep giam dan: ", giamdan(list))
+
