@@ -3,3 +3,6 @@ def tich_gia_tri(tru_dien):
     for gia_tri in tru_dien.values():
         tich *= gia_tri
     return tich
+
+tu_dien = {'a': 10, 'b': 20, 'c': 30}
+print("Tong cac gia tri trong tu dien la:", tich_gia_tri(tu_dien))
