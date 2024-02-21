@@ -8,3 +8,7 @@ def combine_tu_dien(d1, d2):
         else:
             result[k] = d2[k]
     return result
+
+d1 = {'a': 100, 'b': 200}
+d2 = {'a': 300, 'y': 200}
+print("Sau khi Combine tu dien la:",combine_tu_dien(d1,d2))
