@@ -1,2 +1,5 @@
 def xoa_trung(tu_dien):
     return dict(sorted(tu_dien.items()))
+
+d1 = {'a': 100, 'b': 200,'a':300,'c':400}
+print("Sau khi xoa phan tu trung nhau trong tu dien",xoa_trung(d1))
